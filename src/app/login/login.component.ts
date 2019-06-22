@@ -9,6 +9,7 @@ import { FormGroup } from '@angular/forms';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
+
 export class LoginComponent implements OnInit {
   //declare error message and form
   errorMessage: string;
