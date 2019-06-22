@@ -1,0 +1,44 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>
+      <h4>Register New User</h4>
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form >
+      <mat-form-field>
+        <input [(ngModel)]="email" name="email" matInput placeholder="email" type="email">
+      </mat-form-field>
+      <mat-form-field>
+          <input [(ngModel)]="password" name="password" matInput placeholder="password" type="password">
+        </mat-form-field>
+  
+        <br>
+        <mat-form-field>
+            <input [(ngModel)]="name" name="name" matInput placeholder="name">
+          </mat-form-field>
+          <br>
+          
+          <mat-form-field style="width: 100%">
+              <input [(ngModel)]="description" name="description" matInput placeholder="description">
+            </mat-form-field>
+            <br>
+            <!-- <button type="submit" (click)="tryRegister(registerForm.value)" class="btn btn-default signupButton">Sign Up</button> -->
+            <button type="submit" (click)="register()" mat-raised-button color="primary">Register</button>
+    </form>
+    <label class="error">{{errorMessage}}</label>
+    <div class="col-md-4 col-md-offset-4">
+    <button type="button" class="btn btn-primary btn-block" (click)="tryFacebookLogin()">Register with Facebook</button>
+    </div>
+    <br>
+    <div class="col-md-4 col-md-offset-4">
+    <button type="button" class="btn btn-danger btn-block" (click)="tryGoogleLogin()">Register with Google</button>
+  </div>
+  </mat-card-content>
+</mat-card>
+<router-outlet></router-outlet>
+
+
+
+
+

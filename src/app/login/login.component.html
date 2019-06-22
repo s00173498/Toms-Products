@@ -1,0 +1,78 @@
+<mat-card>
+  <mat-card-content>
+    <form class="my-form" [formGroup]="form" (ngSubmit)="Login()">
+      <mat-form-field class="full-width">
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="Email" type="email" name="email" formControlName="email">
+      </mat-form-field>     
+      <mat-form-field class="full-width">
+        <mat-label>Password</mat-label>
+        <input matInput placeholder="Password" type="password" name="password" formControlName="password">
+      </mat-form-field>
+    </form>
+    <label class="error">{{errorMessage}}</label>
+  </mat-card-content>
+  <mat-card-actions>
+    
+    <button mat-raised-button (click)="Login()" color="primary">Login</button>
+  </mat-card-actions>
+  <div class="col-md-4 col-md-offset-4">
+    <button type="button" class="btn btn-primary btn-block" (click)="tryFacebookLogin()">Login with Facebook</button>
+    </div>
+    <br>
+    <div class="col-md-4 col-md-offset-4">
+    <button type="button" class="btn btn-danger btn-block" (click)="tryGoogleLogin()">Login with Google</button>
+  </div>
+</mat-card>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+
+
+
+
+
+
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>
+          <h4>Please Login</h4>
+        </mat-card-title>
+      </mat-card-header>
+  <mat-card-content>
+    <form >
+      
+      <mat-form-field class="half-width">
+      <mat-label>Email</mat-label>
+      <input matInput placeholder="Email" type="email" name="email" formControlName="email">
+    </mat-form-field>
+    <mat-form-field class="half-width">
+        <mat-label>Password</mat-label>
+        <input matInput placeholder="Password" type="password" name="password" formControlName="password">
+       
+    </mat-form-field>
+    <label class="error">{{errorMessage}}</label>
+    </form>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button (click)="Login()" color="primary">Login</button>
+  </mat-card-actions>
+  <div class="col-md-4 col-md-offset-4">
+    <button type="button" class="btn btn-primary btn-block" (click)="tryFacebookLogin()">Login with Facebook</button>
+    </div>
+    <br>
+    <div class="col-md-4 col-md-offset-4">
+    <button type="button" class="btn btn-danger btn-block" (click)="tryGoogleLogin()">Login with Google</button>
+  </div>
+</mat-card> -->

@@ -1,0 +1,47 @@
+
+<h5 class="card-title">Enter the details on the product and press submit</h5>
+<form>
+<div class="col-md-5">
+  <input type="text" class="form-control" name="productID" id="productID" placeholder="Enter product Id"
+  [(ngModel)]="productId">
+</div>
+<div class="col-md-5">
+  <input type="text" class="form-control" name="productName" id="productName" placeholder="Enter product Name"
+  [(ngModel)]="productName">
+</div>
+<div class="col-md-5">
+  <input type="text" class="form-control" name="productCode" id="productCode" placeholder="Enter product Code"
+  [(ngModel)]="productCode">
+</div>
+<div class="col-md-5">
+  <input type="text" class="form-control" name="releaseDate" id="releaseDate" placeholder="Enter product release date"
+  [(ngModel)]="releaseDate">
+</div>
+<div class="col-md-5">
+  <input type="text" class="form-control" name="description" id="description" placeholder="Enter product description"
+  [(ngModel)]="description">
+</div>
+<div class="col-md-5">
+  <input type="text" class="form-control" name="price" id="price" placeholder="Enter product price"
+  [(ngModel)]="price">
+</div>
+<div class="col-md-5">
+  <input type="text" class="form-control" name="starRating" id="starRating" placeholder="Enter product star rating"
+  [(ngModel)]="starRating">
+</div>
+<div class="col-md-5" fxLayout="row" fxLayoutGap="20px">
+  <input fxFlex="60" type="text" class="form-control" name="imageStr" id="imageStr" placeholder="Enter image string"
+  [(ngModel)]="imageStr">
+  <button fxFlex="20" mat-raised-button color="primary" type="submit" (click)="showHideDisplayClipartComponent()">Find Image</button>
+</div>
+<div class="col-md-5">
+  <app-display-clipart (addImageStringEE)="addImageStringToFormTextBox($event)" *ngIf='showDisplayClipartComponent'
+   [imageStr]="imageStr"></app-display-clipart>
+</div>
+<div class="col-md-5">
+  <input type="text" class="form-control" name="imageUrl" id="imageUrl" placeholder="Enter image url"
+  [(ngModel)]="imageUrl">
+</div>
+<button type="submit" (click)="addProduct()" class="btn-primary">Submit</button>
+
+</form>
